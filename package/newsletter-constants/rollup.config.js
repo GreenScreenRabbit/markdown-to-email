@@ -8,6 +8,7 @@ import pkg from "./package.json";
 import globals from "rollup-plugin-node-globals";
 import includePaths from "rollup-plugin-includepaths";
 
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 // import eslint from "rollup-plugin-eslint";
 
 // not all files you want to resolve are .js files
@@ -94,7 +95,7 @@ const plugins = () => [
   includePaths(includePathOptions),
   // notify(),
   globals(),
-  builtins()
+  builtins(),
 
   // remove flow annotations from output
   // flow(),
@@ -104,6 +105,8 @@ const plugins = () => [
   //   files: ['src/*.flow'],
   //   dest: 'dist',
   // }),
+
+  nodePolyfills()
 ];
 
 // example for adding plugin for env only
@@ -149,7 +152,8 @@ export default {
 
       // https://rollupjs.org/guide/en#output-globals-g-globals
       globals: {
-        path: "path"
+        // path: "path"
+        os: "os"
       }
     }
   ]

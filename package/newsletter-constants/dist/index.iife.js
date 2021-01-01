@@ -1,4 +1,4 @@
-var newsletterLayoutsPlainJS = (function (exports, os) {
+var newsletterConst = (function (exports, os) {
   'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
