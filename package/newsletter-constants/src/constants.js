@@ -54,7 +54,7 @@ const REGEXP_Q = /\:\"(.*?)\"\:/g;
 const REGEXP_CODE = /`(.*?)`/g;
 
 const REGEXP_UL_LIST = new RegExp(`${newLine}(((\\s{4})?\\*(.*?)${newLine}){1,})`, 'g');
-const REGEXP_OL_LIST = new RegExp(`${newLine}[0-9]+\\.(.*)`, 'g'); 
+const REGEXP_OL_LIST = new RegExp(`${newLine}[0-9]+\\.(.*)`, 'g');
 
 const REGEXP_BLOCKQUOTE = new RegExp(`${newLine}(&gt;|\\>)(.*)`, 'g');
 const REGEXP_HR = new RegExp(`${newLine}-{5,}`,'g');
@@ -75,7 +75,7 @@ const REGEXP_PREVIEW_TEXT = new RegExp(`#~(.*?)${newLine}`);
 // const REGEXP_H2 = /^## (.*$)/gim;
 
 
-module.exports = {
+export const html_tags = {
   REGEXP_HEADER,
   REGEXP_IMAGE,
   REGEXP_LINK,
