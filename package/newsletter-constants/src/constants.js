@@ -42,7 +42,9 @@
 // const REGEXP_CUSTOM_LINK = /\[(.*?)\]\((.*?)\)/g;
 // const REGEXP_CUSTOM_MEME_IMAGE = /\((.*?)\)/g; // @TODO or use gim as for other cases that we have?
 // // const REGEXP_CUSTOM_
-const {newLine} = require('./utils');
+
+import newLine from ('./utils');
+// const {newLine} = require('./utils');
 
 const REGEXP_HEADER = new RegExp(`${newLine}(#+)(.*)`, 'g');
 
