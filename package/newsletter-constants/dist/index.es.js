@@ -1,6 +1,7 @@
-var _require = require('./utils'),
-    newLine = _require.newLine;
+import os from 'os';
 
+var platform = os.platform();
+var newLine = platform === "win32" ? "\r\n" : "\n";
 var REGEXP_HEADER = new RegExp("".concat(newLine, "(#+)(.*)"), 'g');
 var REGEXP_IMAGE = /!\[([^\[]+)\]\(([^\)]+)\)/g;
 var REGEXP_LINK = /\[([^\[]+)\]\(([^\)]+)\)/g;

@@ -2,9 +2,14 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var _require = require('./utils'),
-    newLine = _require.newLine;
+var os = require('os');
 
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var os__default = /*#__PURE__*/_interopDefaultLegacy(os);
+
+var platform = os__default['default'].platform();
+var newLine = platform === "win32" ? "\r\n" : "\n";
 var REGEXP_HEADER = new RegExp("".concat(newLine, "(#+)(.*)"), 'g');
 var REGEXP_IMAGE = /!\[([^\[]+)\]\(([^\)]+)\)/g;
 var REGEXP_LINK = /\[([^\[]+)\]\(([^\)]+)\)/g;

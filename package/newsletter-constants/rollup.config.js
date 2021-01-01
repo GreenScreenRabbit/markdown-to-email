@@ -17,11 +17,11 @@ const extensions = [
   //".json"
 ];
 
-const name = "newsletterLayoutsPlainJS";
+const name = "newsletterConst";
 
 // packages that should be treated as external dependencies, not bundled
 // e.g. ['axios']
-const external = ["fs", "path", "uuid"];
+const external = ["os"];
 
 const includePathOptions = {
   include: {},
